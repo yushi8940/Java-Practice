@@ -1,0 +1,3 @@
+module ModuleSample {
+    requires Lib;
+}
