@@ -24,6 +24,32 @@ public class Main {
         // Catクラスのmeowメソッドを呼ぶためには、Animal型からCat型へのダウンキャストが必要
         Cat cat = (Cat) myPet2;
         cat.meow();
+        
+        System.out.println();
+        
+        // サブクラスのコンストラクタにsuper()が自動的に追加されることの確認
+        System.out.print("A a1 = new B(); → ");
+        A a1 = new B();
+        
+        System.out.println();
+        
+        System.out.print("A a2 = new B(\"pple\"); → ");
+        A a2 = new B("pple");
     }
 
+}
+
+
+class A {
+    public A() {
+        System.out.print("A");
+    }
+}
+class B extends A {
+    public B() {
+        System.out.print("B");
+    }
+    public B(String msg) {
+        System.out.println(msg);
+    }
 }
